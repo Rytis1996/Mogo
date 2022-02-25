@@ -1,0 +1,12 @@
+@mixin name {
+    display: inline-block;
+    font-size: 1.5em;
+    color: gray;
+}
+@mixin block {
+    width: rem(60px);
+    height: rem(3);
+    border: none;
+    margin: 0 auto;
+}
+
