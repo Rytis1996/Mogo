@@ -260,7 +260,7 @@ table {
           box-sizing: border-box;
   font-size: 0;
   padding: 0;
-  margin-left: 1.875rem;
+  margin-left: 2.8125rem;
 }
 
 .about__photo--img:first-child {
@@ -337,7 +337,7 @@ table {
   width: 3.125rem;
   height: 3.125rem;
   margin: 0 1.75rem;
-  position: relative;
+  vertical-align: top;
 }
 
 .about__footer--card div {

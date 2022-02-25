@@ -51,7 +51,7 @@
             box-sizing: border-box;
             font-size: 0;
             padding: 0;
-            margin-left: rem(30px);
+            margin-left: rem(45px);
         }
         &--img:first-child{
             margin-left: 0;
@@ -71,11 +71,6 @@
             opacity: 0.9;
         }
     }
-    // &__photo:first-child {
-    //     margin-left: 0;
-    //     background-image: url("/assets/img/keyboard.png");
-
-    // }
     // --BLUE BLOCK-- //
     &__blueline {
         background-color: $bg-blue;
@@ -102,7 +97,7 @@
         font-size: rem(14px);
         font-family: montserrat;
     }
-
+// --SERVICE-- //
     &__service {
         text-align: center;
         margin-top: rem(90px);
@@ -124,8 +119,7 @@
                 width: rem(50px);
                 height: rem(50px);
                 margin: 0 rem(28px);
-                position: relative;
-                
+                vertical-align: top;
             }
             div {
                 display: inline-block;
