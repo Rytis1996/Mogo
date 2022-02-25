@@ -360,4 +360,53 @@ table {
 .about__footer--card:nth-child(-n+3) {
   border-bottom: solid 1px #999999;
 }
+
+.work {
+  font-size: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  margin-top: 4.6875rem;
+}
+
+.work h1 {
+  font-size: 1.875rem;
+  color: black;
+  font-family: montserrat;
+  font-weight: bold;
+  margin: 1.5625rem 0;
+  text-transform: uppercase;
+}
+
+.work h2 {
+  font-size: 1.5rem;
+  color: black;
+  font-family: kaushan script;
+}
+
+.work__block {
+  width: 3.75rem;
+  height: 0.1875rem;
+  border: none;
+  margin: 0 auto;
+  background-color: rgba(240, 130, 130, 0.7);
+  margin: 0.9375rem auto;
+}
+
+.work__designe {
+  padding-top: 5.625rem;
+  background-image: url(/assets/img/lake.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.work__designe--display {
+  z-index: 0;
+}
+
+.work__designe--phone {
+  position: relative;
+  z-index: 1;
+}
 /*# sourceMappingURL=main.css.map */

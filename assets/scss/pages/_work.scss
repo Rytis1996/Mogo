@@ -1,0 +1,41 @@
+.work {
+    font-size: 0;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: rem(75px);
+
+    h1 {
+        font-size: rem(30px);
+        color: $fontblack;
+        font-family: montserrat;
+        font-weight: bold;
+        margin: rem(25px) 0;
+        text-transform: uppercase;
+    }
+    h2 {
+        font-size: rem(24px);
+        color: $fontblack;
+        font-family: kaushan script;
+    }
+
+    &__block {
+        @include block;
+        background-color: $bg-first;
+        margin: rem(15px) auto;
+    }
+
+    &__designe {
+        padding-top: rem(90px);
+        background-image: url(/assets/img/lake.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        &--display {
+            z-index: 0;
+        }
+        &--phone {
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
