@@ -1,55 +1,129 @@
 .work {
-    font-size: 0;
-    box-sizing: border-box;
-    text-align: center;
-    margin-top: rem(75px);
+  font-size: 0;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: rem(75px);
 
-    h1 {
-        font-size: rem(30px);
-        color: $fontblack;
-        font-family: montserrat;
-        font-weight: bold;
-        margin: rem(25px) 0;
-        text-transform: uppercase;
-    }
-    h2 {
-        font-size: rem(24px);
-        color: $fontblack;
-        font-family: kaushan script;
+  &__layout {
+    max-width: rem(1200px);
+    position: relative;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: rem(30px);
+    color: $fontblack;
+    font-family: montserrat;
+    font-weight: bold;
+    margin: rem(25px) 0;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: rem(24px);
+    color: $fontblack;
+    font-family: kaushan script;
+  }
+
+  p {
+    font-family: roboto;
+    font-size: rem(15px);
+    color: $fontprg;
+    max-width: rem(840px);
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  &__block {
+    @include block;
+    background-color: $bg-first;
+    margin: rem(15px) auto;
+  }
+
+  &__designe {
+    padding-top: rem(90px);
+    background-image: url(/assets/img/lake.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: rem(110px);
+
+    &--display {
+      display: inline-block;
     }
 
-    &__block {
-        @include block;
-        background-color: $bg-first;
-        margin: rem(15px) auto;
+    &--phone {
+      display: inline-block;
+      position: absolute;
+      background-image: url(/assets/img/phone-template.png);
+      background-size: cover;
+      background-position: center;
+      width: rem(200px);
+      height: rem(430px);
+      border-radius: 10%;
+      left: rem(1150px);
+      bottom: rem(-50px);
     }
+  }
+  &__display::before {
+    content: " ";
+    background: linear-gradient($bg-first, $bg-second);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.8;
+  }
 
-    &__designe {
-        padding-top: rem(90px);
-        background-image: url(/assets/img/lake.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        z-index: -1;
-        &--display {
-            z-index: 0;
-        }
-        &__display::before {
-            content: ' ';
-            background: linear-gradient($bg-first, $bg-second);
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            opacity: 0.9;
-        }
-        &--phone {
-            position: relative;
-            z-index: 1;
-            div {
-                position: absolute;
-                display: inline;
-            }
-        }
+  // --WHAT WE DO-- //
+  &__heading {
+    margin-bottom: rem(100px);
+  }
+
+  &__works {
+    margin-bottom: rem(100px);
+
+    &--img {
+      padding-right: rem(30px);
+      display: inline-block;
+      height: rem(380px);
+      width: 50%;
     }
+    &--info {
+      display: inline-block;
+      width: 50%;
+      height: rem(380px);
+      text-align: left;
+
+      div {
+        border: 1px solid $fontprg;
+        width: 100%;
+        padding: rem(10px) rem(15px);
+      }
+      div:nth-child(n + 2) {
+        margin-top: rem(10px);
+      }
+    }
+    // --------
+    h5 {
+      font-size: rem(14px);
+      color: $fontblack;
+      font-family: montserrat;
+      font-weight: bold;
+      text-transform: uppercase;
+      display: inline;
+      margin-left: rem(15px);
+      text-align: center;
+    }
+    textarea {
+      font-family: roboto;
+      font-size: rem(15px);
+      color: $fontprg;
+      line-height: 1.5;
+      margin: 0 auto;
+      padding: rem(20px) rem(15px);
+      width: 100%;
+      height: rem(180px);
+    }
+  }
 }
