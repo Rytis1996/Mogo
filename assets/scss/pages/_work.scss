@@ -66,7 +66,7 @@
   }
   &__display::before {
     content: " ";
-    background: linear-gradient($bg-first, $bg-second);
+    background: $fontprg;
     position: absolute;
     top: 0;
     right: 0;
@@ -82,6 +82,7 @@
 
   &__works {
     margin-bottom: rem(100px);
+    text-align: center;
 
     &--img {
       padding-right: rem(30px);
@@ -94,15 +95,25 @@
       width: 50%;
       height: rem(380px);
       text-align: left;
+      position: relative;
+      vertical-align: top;
 
+      i {
+        margin: rem(14px) rem(15px);
+        height: rem(30px);
+      }
       div {
         border: 1px solid $fontprg;
         width: 100%;
-        padding: rem(10px) rem(15px);
+        position: relative;
       }
       div:nth-child(n + 2) {
         margin-top: rem(10px);
       }
+    }
+    &--icon-right {
+      position: absolute;
+      right: 0;
     }
     // --------
     h5 {
@@ -112,15 +123,12 @@
       font-weight: bold;
       text-transform: uppercase;
       display: inline;
-      margin-left: rem(15px);
-      text-align: center;
     }
     textarea {
       font-family: roboto;
       font-size: rem(15px);
       color: $fontprg;
       line-height: 1.5;
-      margin: 0 auto;
       padding: rem(20px) rem(15px);
       width: 100%;
       height: rem(180px);
