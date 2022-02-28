@@ -49,6 +49,7 @@
 
     &--display {
       display: inline-block;
+      z-index: 1;
     }
 
     &--phone {
@@ -64,7 +65,7 @@
       bottom: rem(-50px);
     }
   }
-  &__display::before {
+  &__designe::before {
     content: " ";
     background: $fontprg;
     position: absolute;
@@ -72,7 +73,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    opacity: 0.8;
+    opacity: 0.6;
   }
 
   // --WHAT WE DO-- //
@@ -94,26 +95,30 @@
       display: inline-block;
       width: 50%;
       height: rem(380px);
-      text-align: left;
       position: relative;
+      text-align: left;
       vertical-align: top;
 
       i {
         margin: rem(14px) rem(15px);
         height: rem(30px);
+        color: $bg-blue;
       }
+
+      i:last-child {
+        position: absolute;
+        right: 0;
+        color: $fontprg;
+      }
+
       div {
-        border: 1px solid $fontprg;
+        border: 1px solid $bg-lgrey;
         width: 100%;
         position: relative;
       }
-      div:nth-child(n + 2) {
+      div:nth-child(n + 3) {
         margin-top: rem(10px);
       }
-    }
-    &--icon-right {
-      position: absolute;
-      right: 0;
     }
     // --------
     h5 {
@@ -123,6 +128,7 @@
       font-weight: bold;
       text-transform: uppercase;
       display: inline;
+      text-align: center;
     }
     textarea {
       font-family: roboto;
@@ -132,6 +138,55 @@
       padding: rem(20px) rem(15px);
       width: 100%;
       height: rem(180px);
+      border: none;
+      border-right: solid white 20px;
     }
+    textarea::-webkit-scrollbar {
+      width: rem(5px);
+    }
+    textarea::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 10px 10px 10px $bg-lgrey;
+      border-radius: rem(10px);
+      margin: rem(20px);
+    }
+    textarea::-webkit-scrollbar-thumb {
+      background-color: $bg-blue;
+      border-radius: rem(10px);
+    }
+  }
+
+  //   FEEDBACK   //
+  &__feedback {
+    background-color: $bg-lightgrey;
+    &--row {
+      color: $bg-lgrey;
+      margin: 0 rem(20px);
+    }
+    &--icon {
+      font-size: rem(60px);
+      color: $bg-blue;
+      border: 2px solid $bg-blue;
+      padding: rem(40px);
+    }
+  }
+  p {
+    @include par;
+    max-width: rem(780px);
+    margin-bottom: rem(30px);
+  }
+  h2 {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__block-other {
+    @include block;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__text {
+    display: inline-block;
+    margin: rem(70px);
+    max-width: rem(780px);
+    text-align: left;
   }
 }

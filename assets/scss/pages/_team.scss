@@ -1,0 +1,45 @@
+.team {
+  @include pgheader;
+  @include layout;
+  font-size: 0;
+
+  &__header {
+    margin: rem(90px) 0;
+  }
+
+  h5 {
+    font-size: rem(14px);
+    color: $fontblack;
+    font-family: montserrat;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: rem(20px);
+  }
+
+  &__photo {
+    margin: rem(90px) 0;
+    div {
+      display: inline-block;
+    }
+    h5 {
+      margin-top: rem(30px);
+    }
+    &--img {
+      width: rem(370px);
+      height: rem(250px);
+      display: inline-block;
+      box-sizing: border-box;
+      font-size: 0;
+      padding: 0;
+      margin-left: rem(45px);
+    }
+    &--img:first-child {
+      margin-left: 0;
+      position: relative;
+    }
+    &--img:hover {
+      opacity: 0.9;
+      box-shadow: 24px 12px 2px 1px $bg-blue;
+    }
+  }
+}
