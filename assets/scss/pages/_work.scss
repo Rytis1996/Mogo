@@ -33,9 +33,23 @@
         &--display {
             z-index: 0;
         }
+        &__display::before {
+            content: ' ';
+            background: linear-gradient($bg-first, $bg-second);
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            opacity: 0.9;
+        }
         &--phone {
             position: relative;
             z-index: 1;
+            div {
+                position: absolute;
+                display: inline;
+            }
         }
     }
 }

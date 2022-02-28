@@ -405,8 +405,27 @@ table {
   z-index: 0;
 }
 
+.work__designe__display::before {
+  content: ' ';
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 130, 130, 0.7)), to(rgba(240, 217, 138, 0.7)));
+  background: -webkit-linear-gradient(rgba(240, 130, 130, 0.7), rgba(240, 217, 138, 0.7));
+  background: -o-linear-gradient(rgba(240, 130, 130, 0.7), rgba(240, 217, 138, 0.7));
+  background: linear-gradient(rgba(240, 130, 130, 0.7), rgba(240, 217, 138, 0.7));
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0.9;
+}
+
 .work__designe--phone {
   position: relative;
   z-index: 1;
+}
+
+.work__designe--phone div {
+  position: absolute;
+  display: inline;
 }
 /*# sourceMappingURL=main.css.map */
