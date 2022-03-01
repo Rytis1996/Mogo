@@ -13,53 +13,82 @@
     text-align: center;
     margin-top: rem(90px);
   }
-  h1 {
-    font-size: rem(30px);
-    color: $fontblack;
-    font-family: montserrat;
-    font-weight: bold;
-    margin: rem(25px) 0;
-    text-transform: uppercase;
-  }
-  h2 {
-    font-size: rem(24px);
-    color: $fontblack;
-    font-family: kaushan script;
-  }
+
+  //--HEADER--//
+  @include pgheader;
   &__block {
     @include block;
-    background-color: $bg-first;
     margin: rem(15px) auto;
   }
 
-  p {
-    font-family: roboto;
-    font-size: rem(15px);
-    color: $fontprg;
-    max-width: rem(840px);
-    margin: 0 auto;
-    line-height: 1.5;
-  }
-
+  // ABOUT PHOTO //
   &__photo {
     margin: rem(90px) 0;
-    &--img {
+
+    &--blockphoto {
       width: rem(370px);
-      // width: 33%;
       height: rem(250px);
       display: inline-block;
-      box-sizing: border-box;
-      font-size: 0;
-      padding: 0;
       margin-left: rem(45px);
+      background-color: $bg-blue;
     }
-    &--img:first-child {
+
+    &--hovericon {
+      display: block;
+      font-size: 0;
+      i {
+        display: none;
+      }
+    }
+    &--hoverimg {
+      position: relative;
+      background-image: url(/assets/img/keyboard.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    &--blockphoto:first-child {
       margin-left: 0;
       position: relative;
     }
-    &--img:hover {
-      opacity: 0.9;
-      box-shadow: 24px 12px 2px 1px $bg-blue;
+
+    &--hoverimg:hover {
+      background-color: $bg-blue;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      text-align: center;
+      vertical-align: middle;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      div {
+        font-size: rem(18px);
+        font-family: montserrat;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+        vertical-align: middle;
+      }
+      i {
+        display: block;
+      }
+    }
+
+    &--hoverimg:hover::before {
+      content: " ";
+      background: linear-gradient($bg-first, $bg-second);
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      opacity: 0.8;
+      z-index: -1;
     }
   }
   // --BLUE BLOCK-- //
@@ -78,21 +107,22 @@
     &--block:last-child {
       border-right: 1px solid white;
     }
-  }
-  h3 {
-    font-size: rem(72px);
-    font-family: montserrat;
-    font-weight: bold;
-  }
-  h4 {
-    font-size: rem(14px);
-    font-family: montserrat;
+    h3 {
+      font-size: rem(72px);
+      font-family: montserrat;
+      font-weight: bold;
+    }
+    h4 {
+      font-size: rem(14px);
+      font-family: montserrat;
+    }
   }
   // --SERVICE-- //
   &__service {
     text-align: center;
     margin-top: rem(90px);
   }
+  // --Amazing services --//
   &__footer {
     max-width: rem(1200px);
     position: relative;

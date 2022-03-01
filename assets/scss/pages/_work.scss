@@ -4,83 +4,67 @@
   text-align: center;
   margin-top: rem(75px);
 
-  &__layout {
-    max-width: rem(1200px);
-    position: relative;
-    margin: 0 auto;
-  }
-
-  h1 {
-    font-size: rem(30px);
-    color: $fontblack;
-    font-family: montserrat;
-    font-weight: bold;
-    margin: rem(25px) 0;
-    text-transform: uppercase;
-  }
-  h2 {
-    font-size: rem(24px);
-    color: $fontblack;
-    font-family: kaushan script;
-  }
-
-  p {
-    font-family: roboto;
-    font-size: rem(15px);
-    color: $fontprg;
-    max-width: rem(840px);
-    margin: 0 auto;
-    line-height: 1.5;
-  }
-
+  // pgHEADas
+  @include pgheader;
   &__block {
     @include block;
     background-color: $bg-first;
     margin: rem(15px) auto;
   }
 
+  &__layout {
+    max-width: rem(1200px);
+    position: relative;
+    margin: 0 auto;
+  }
+
+  // <!-- Tablet with phone in grey background with mountain-img -- >
   &__designe {
     padding-top: rem(90px);
     background-image: url(/assets/img/lake.png);
+    // box-shadow: inset 0 0 0 10px $fontprg;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     margin-bottom: rem(110px);
 
-    &--display {
-      display: inline-block;
-      z-index: 1;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(224, 224, 224, 0.5);
     }
 
+    &--display {
+      display: inline-block;
+      position: absolute;
+      top: rem(210px);
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
     &--phone {
       display: inline-block;
       position: absolute;
-      background-image: url(/assets/img/phone-template.png);
-      background-size: cover;
-      background-position: center;
-      width: rem(200px);
-      height: rem(430px);
-      border-radius: 10%;
-      left: rem(1150px);
-      bottom: rem(-50px);
+      top: rem(450px);
+      bottom: 0;
+      right: 0;
+      left: rem(500px);
+
+      img {
+        border-radius: 10%;
+      }
     }
-  }
-  &__designe::before {
-    content: " ";
-    background: $fontprg;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    opacity: 0.6;
   }
 
   // --WHAT WE DO-- //
   &__heading {
     margin-bottom: rem(100px);
   }
-
+  //   Right Photo Left info with scrollbar textarea   //
   &__works {
     margin-bottom: rem(100px);
     text-align: center;
@@ -145,7 +129,6 @@
       width: rem(5px);
     }
     textarea::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 10px 10px 10px $bg-lgrey;
       border-radius: rem(10px);
       margin: rem(20px);
     }
@@ -177,6 +160,7 @@
   h2 {
     display: inline-block;
     vertical-align: middle;
+    margin-left: rem(10px);
   }
   &__block-other {
     @include block;
