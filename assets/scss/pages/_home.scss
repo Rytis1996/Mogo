@@ -1,142 +1,141 @@
 .home {
-    box-sizing: border-box;
-    display: block;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  background-image: url("/assets/img/eagle.png");
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  font-size: 0;
+
+  &__layout {
+    max-width: rem(1200px);
     position: relative;
-    background-image: url("/assets/img/eagle.png");
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
-    font-size: 0;
+    margin: 0 auto;
+  }
 
-    &__layout {
-        max-width: rem(1200px);
-        position: relative;
-        margin: 0 auto;
-    }
+  // --NAV-- //
 
-        // --NAV-- //
+  &__logo {
+    display: inline-block;
+    font-family: montserrat;
+    font-weight: bold;
+    font-size: rem(30px);
+    color: $fontwhite;
+    margin-top: rem(30px);
+  }
 
-    &__logo {
-        display: inline-block;
-        font-family: montserrat;
-        font-weight: bold;
-        font-size: rem(30px);
-        color: $fontwhite;
-        margin-top: rem(30px);
-    }
+  &__nav-right {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    margin-top: 40px;
+  }
 
-    &__nav-right {
-        display: inline-block;
-        position: absolute;
-        right: 0;
-        margin-top: 40px;
-    }
+  &__nav-link {
+    color: $fontwhite;
+    text-decoration: none;
+    font-family: montserrat;
+    font-weight: 400;
+    font-size: rem(14px);
+    text-transform: uppercase;
+    margin-left: rem(55px);
+    padding-bottom: rem(12px);
+  }
 
-    &__nav-link {
-        color: $fontwhite;
-        text-decoration: none;
-        font-family: montserrat;
-        font-weight: 400;        
-        font-size: rem(14px);
-        text-transform: uppercase;
-        margin-left: rem(55px);
-        padding-bottom: rem(12px);
-    }
+  &__nav-link:hover {
+    color: rgb(252, 227, 138);
+    border-bottom: solid 2px rgb(252, 227, 138);
+  }
 
-    &__nav-link:hover {
-        color: rgb(252, 227, 138);
-        border-bottom: solid 2px rgb(252, 227, 138);
-    }
+  // --BODY-- //
 
-        // --BODY-- //
+  &__body {
+    max-width: rem(840px);
+    margin: rem(150px) auto;
+    text-align: center;
+  }
+  &__h2 {
+    font-family: kaushan script;
+    font-size: rem(70px);
+    font-weight: 400;
+    color: $fontwhite;
+    text-transform: capitalize;
+  }
 
-    &__body {
-        max-width: rem(840px);
-        margin: rem(150px) auto;
-        text-align: center;
-    }
-    &__h2 {
-        font-family: kaushan script;
-        font-size: rem(70px);
-        font-weight: 400;
-        color: $fontwhite;
-        text-transform: capitalize;
-    }
+  &__h1 {
+    font-family: Montserrat;
+    font-size: rem(150px);
+    font-weight: bold;
+    color: $fontwhite;
+    text-align: center;
+    margin: rem(70px) auto;
+    text-align: center;
+  }
 
-    &__h1 {
-        font-family: Montserrat;
-        font-size: rem(150px);
-        font-weight: bold;
-        color: $fontwhite;
-        text-align: center;
-        margin: rem(70px) auto;
-        text-align: center;
-    }
+  &__block {
+    @include block;
+    background-color: white;
+  }
+  &__btn-more {
+    background: none;
+    width: rem(160px);
+    height: rem(40px);
+    border: solid 4px white;
+    text-transform: uppercase;
+    color: $fontwhite;
+    font-family: montserrat;
+    font-weight: bold;
+    font-size: rem(14px);
+    margin-top: rem(50px);
+  }
 
-    &__block {
-        @include block;
-        background-color: white;
-    }
-    &__btn-more {
-        background:none;
-        width: rem(160px);
-        height: rem(40px);
-        border: solid 4px white;
-        text-transform: uppercase;
-        color: $fontwhite;
-        font-family: montserrat;
-        font-weight: bold;
-        font-size: rem(14px);
-        margin-top: rem(50px);
-    }
+  // --FOOTER-- //
 
-        // --FOOTER-- //
+  &__info {
+    display: inline-block;
+    width: rem(277px);
+    color: $fontwhite;
+    margin-left: rem(30px);
+    opacity: 60%;
+  }
 
-    &__info {
-        display: inline-block;
-        width: rem(277px);
-        color: $fontwhite;
-        margin-left: rem(30px);
-        opacity: 60%;
-    }
+  &__info:first-child {
+    margin-left: 0;
+  }
 
-    &__info:first-child{
-        margin-left: 0;
-    }
+  &__footer-block {
+    background-color: white;
+    height: rem(3px);
+  }
 
-    &__footer-block{
-        background-color: white;
-        height: rem(3px);
-    }
+  &__number {
+    display: inline-block;
+    margin: rem(25px) 0;
+    font-size: rem(24px);
+    font-family: montserrat;
+    font-weight: 400;
+  }
+  &__number-name {
+    display: inline-block;
+    font-size: rem(18px);
+    font-family: montserrat;
+    font-weight: 400;
+    margin-left: rem(10px);
+  }
 
-    &__number {
-        display: inline-block;
-        margin: rem(25px) 0;
-        font-size: rem(24px);
-        font-family: montserrat;
-        font-weight: 400;
-    }
-    &__number-name {
-        display: inline-block;
-        font-size: rem(18px);
-        font-family: montserrat;
-        font-weight: 400;
-        margin-left: rem(10px);
-    }
-
-    &__info:hover{
-        opacity: 1;
-    }
-
+  &__info:hover {
+    opacity: 1;
+  }
 }
 
 .home::before {
-    content: ' ';
-    background: linear-gradient($bg-first, $bg-second);
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    opacity: 0.9;
+  content: " ";
+  background: linear-gradient($bg-first, $bg-second);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0.9;
 }
