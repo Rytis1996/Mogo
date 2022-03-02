@@ -6,40 +6,106 @@
   &__header {
     margin: rem(90px) 0;
   }
+  // -- 3 MAN PHOTO IN LINE -- //
+  &__photo {
+    margin: rem(90px) 0 rem(30px) 0;
+  }
+  &__photoBlock {
+    width: rem(370px);
+    height: rem(470px);
+    display: inline-block;
+    margin-left: rem(45px);
+    font-size: 0;
+    box-sizing: border-box;
+    background-color: $bg-blue;
 
-  h5 {
-    font-size: rem(14px);
-    color: $fontblack;
-    font-family: montserrat;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: rem(20px);
+    #photo4 {
+      background-image: url(/assets/img/man1.png);
+    }
+    #photo5 {
+      background-image: url(/assets/img/man2.png);
+    }
+    #photo6 {
+      background-image: url(/assets/img/man3.png);
+    }
+
+    div {
+      width: rem(370px);
+      height: rem(470px);
+    }
+    span {
+      color: $fontblack;
+      font-weight: bold;
+      display: none;
+    }
   }
 
-  &__photo {
-    margin: rem(90px) 0;
+  &__photoBlock:hover {
+    position: relative;
+
     div {
-      display: inline-block;
-    }
-    h5 {
-      margin-top: rem(30px);
-    }
-    &--img {
+      position: absolute;
       width: rem(370px);
-      height: rem(250px);
+      height: rem(470px);
+      bottom: 10px;
+      right: 10px;
+    }
+    div::before {
+      content: " ";
+      background: linear-gradient($bg-first, $bg-second);
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      opacity: 0.9;
+    }
+    span {
+      display: block;
+      position: absolute;
+      color: $fontwhite;
+      left: rem(70px);
+      top: rem(200px);
+    }
+    i:first-child {
+      color: $fontwhite;
+      background-color: $bg-red;
+    }
+    i {
+      font-size: rem(24px);
+      padding: rem(12px);
+      border-right: 1px solid $bg-red;
+      background-color: $bg-yelow;
+      color: $bg-red;
+    }
+  }
+
+  &__photoBlock:first-child {
+    margin-left: 0;
+  }
+
+  &__photoName {
+    margin-bottom: rem(120px);
+    div {
+      width: rem(370px);
       display: inline-block;
-      box-sizing: border-box;
-      font-size: 0;
-      padding: 0;
       margin-left: rem(45px);
     }
-    &--img:first-child {
+    div:first-child {
       margin-left: 0;
-      position: relative;
     }
-    &--img:hover {
-      opacity: 0.9;
-      box-shadow: 24px 12px 2px 1px $bg-blue;
+    h5 {
+      font-size: rem(14px);
+      color: $fontblack;
+      font-family: montserrat;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: rem(16px);
     }
+  }
+  // -- TEAM FOOTER -- //
+  &__logo {
+    width: 100%;
+    background-color: $bg-lightgrey;
   }
 }
