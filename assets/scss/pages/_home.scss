@@ -9,19 +9,19 @@
   font-size: 0;
 
   &__layout {
-    max-width: rem(1200px);
-    position: relative;
-    margin: 0 auto;
+    @include layout;
   }
 
   // --NAV-- //
 
-  &__logo {
+  &__mogoLogo {
     display: inline-block;
+    width: 100%;
     font-family: montserrat;
     font-weight: bold;
     font-size: rem(30px);
     color: $fontwhite;
+    text-align: left;
     margin-top: rem(30px);
   }
 

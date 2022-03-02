@@ -2,15 +2,16 @@
   box-sizing: border-box;
   font-size: 0;
 
-  // --HEADER-- //
-  &__story {
-    text-align: center;
-    margin-top: rem(90px);
-  }
-
   //--HEADER--//
   @include pgheader;
-  @include layout;
+
+  &__layout {
+    @include layout;
+  }
+
+  &__header {
+    @include pgheader;
+  }
 
   &__block {
     @include block;

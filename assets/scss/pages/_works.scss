@@ -1,0 +1,97 @@
+.works {
+  font-size: 0;
+  box-sizing: border-box;
+  &__layout {
+    @include layout;
+  }
+  &__header {
+    @include pgheader;
+  }
+  &__block {
+    @include block;
+    margin: rem(15px) auto;
+  }
+
+  // -- PHTOLIBRARY -- //
+
+  &__photoLibrary {
+    display: block;
+
+    #pL1 {
+      background-image: url(/assets/img/pL1.png);
+    }
+    #pL2 {
+      background-image: url(/assets/img/pL2.png);
+    }
+    #pL3 {
+      background-image: url(/assets/img/pL3.png);
+    }
+    #pL4 {
+      background-image: url(/assets/img/pL4.png);
+    }
+    #pL5 {
+      background-image: url(/assets/img/pL5.png);
+    }
+    #pL6 {
+      background-image: url(/assets/img/pL6.png);
+    }
+    #pL7 {
+      background-image: url(/assets/img/pL7.png);
+    }
+  }
+  &__photoList {
+    width: 25%;
+    display: inline-block;
+
+    div {
+      height: rem(390px);
+    }
+    i {
+      display: none;
+    }
+  }
+
+  &__photoBlock:hover {
+    position: relative;
+
+    div {
+      position: absolute;
+      width: rem(370px);
+      height: rem(470px);
+      bottom: 10px;
+      right: 10px;
+    }
+    div::before {
+      content: " ";
+      background: linear-gradient($bg-first, $bg-second);
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      opacity: 0.9;
+    }
+    span {
+      display: block;
+      position: absolute;
+      color: $fontwhite;
+      left: rem(70px);
+      top: rem(200px);
+    }
+    i:first-child {
+      color: $fontwhite;
+      background-color: $bg-red;
+    }
+    i {
+      font-size: rem(24px);
+      padding: rem(12px);
+      border-right: 1px solid $bg-red;
+      background-color: $bg-yelow;
+      color: $bg-red;
+    }
+  }
+
+  &__photoBlock:first-child {
+    margin-left: 0;
+  }
+}

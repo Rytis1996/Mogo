@@ -1,10 +1,15 @@
 .team {
-  @include pgheader;
-  @include layout;
+  &__layout {
+    @include layout;
+  }
   font-size: 0;
 
   &__header {
-    margin: rem(90px) 0;
+    @include pgheader;
+  }
+  &__block {
+    @include block;
+    margin: rem(15px) auto;
   }
   // -- 3 MAN PHOTO IN LINE -- //
   &__photo {
@@ -102,10 +107,18 @@
       font-weight: bold;
       margin-bottom: rem(16px);
     }
+    p {
+      font-family: roboto;
+      font-size: rem(15px);
+      color: $fontprg;
+      max-width: rem(840px);
+      margin: 0 auto;
+      line-height: 1.5;
+    }
   }
   // -- TEAM FOOTER -- //
   &__logo {
-    width: 100%;
     background-color: $bg-lightgrey;
+    padding: rem(50px) 0;
   }
 }

@@ -20,6 +20,9 @@
 }
 
 @mixin pgheader {
+  margin: rem(90px) auto;
+  text-align: center;
+
   h1 {
     font-size: rem(30px);
     color: $fontblack;

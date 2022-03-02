@@ -13,9 +13,7 @@
   }
 
   &__layout {
-    max-width: rem(1200px);
-    position: relative;
-    margin: 0 auto;
+    @include layout;
   }
 
   // <!-- Tablet with phone in grey background with mountain-img -- >
