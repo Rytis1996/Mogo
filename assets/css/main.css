@@ -571,6 +571,32 @@ table {
 
 .work__heading {
   margin-bottom: 6.25rem;
+  margin: 5.625rem auto;
+  text-align: center;
+}
+
+.work__heading h1 {
+  font-size: 1.875rem;
+  color: #323232;
+  font-family: montserrat;
+  font-weight: bold;
+  margin: 1.5625rem 0;
+  text-transform: uppercase;
+}
+
+.work__heading h2 {
+  font-size: 1.5rem;
+  color: #323232;
+  font-family: kaushan script;
+}
+
+.work__heading p {
+  font-family: roboto;
+  font-size: 0.9375rem;
+  color: #999999;
+  max-width: 52.5rem;
+  margin: 0 auto;
+  line-height: 1.5;
 }
 
 .work__works {
@@ -679,6 +705,9 @@ table {
 }
 
 .work h2 {
+  color: #323232;
+  font-size: 1.5rem;
+  font-family: kaushan script;
   display: inline-block;
   vertical-align: middle;
   margin-left: 0.625rem;
@@ -1318,19 +1347,97 @@ table {
   position: relative;
   margin: 0 auto;
   text-align: center;
+  margin-bottom: 6.25rem;
 }
 
 .blog__body--card {
-  width: 33%;
+  width: 23.75rem;
   display: inline-block;
+  text-align: left;
+  margin-left: 1.875rem;
+}
+
+.blog__body--card:first-child {
+  margin-left: 0;
 }
 
 .blog__body--card #picture1 {
   background-image: url(/assets/img/picture1.png);
 }
 
+.blog__body--card #picture2 {
+  background-image: url(/assets/img/picture2.png);
+}
+
+.blog__body--card #picture3 {
+  background-image: url(/assets/img/picture3.png);
+}
+
 .blog__body--card div {
   width: 23.75rem;
   height: 15rem;
+  position: relative;
+}
+
+.blog__body--card div span {
+  width: 3.75rem;
+  height: 4.375rem;
+  background-color: #95e1d3;
+  position: absolute;
+  bottom: 0.625rem;
+  left: -0.625rem;
+}
+
+.blog__body--card div h5 {
+  font-size: 1.875rem;
+  font-family: montserrat;
+  font-weight: bold;
+  color: white;
+  margin-top: 0.9375rem;
+  margin-left: 0.9375rem;
+}
+
+.blog__body--card div h6 {
+  font-size: 0.9375rem;
+  font-family: roboto;
+  font-weight: 300;
+  font-style: italic;
+  color: white;
+  margin-top: 0.4375rem;
+  margin-left: 1.1875rem;
+}
+
+.blog__body--card h3 {
+  font-size: 0.875rem;
+  font-family: montserrat;
+  font-weight: 400;
+  color: #323232;
+  margin: 1.25rem 0;
+  text-transform: uppercase;
+}
+
+.blog__body--card h4 {
+  font-size: 0.9375rem;
+  font-family: roboto;
+  font-weight: 400;
+  color: #999999;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 1.4375rem;
+}
+
+.blog__body--card p {
+  font-size: 0.9375rem;
+  font-family: roboto;
+  font-weight: 400;
+  color: #999999;
+  margin: 1.25rem 1.25rem 0.625rem 0;
+  display: inline-block;
+}
+
+.blog__body--card i {
+  font-size: 0.9375rem;
+  color: #95e1d3;
+  margin-right: 0.375rem;
+  display: inline-block;
 }
 /*# sourceMappingURL=main.css.map */

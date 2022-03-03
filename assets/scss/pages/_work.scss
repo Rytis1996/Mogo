@@ -66,6 +66,7 @@
   // --WHAT WE DO-- //
   &__heading {
     margin-bottom: rem(100px);
+    @include pgheader;
   }
   //   Right Photo Left info with scrollbar textarea   //
   &__works {
@@ -161,6 +162,9 @@
     margin-bottom: rem(30px);
   }
   h2 {
+    color: $fontblack;
+    font-size: rem(24px);
+    font-family: kaushan script;
     display: inline-block;
     vertical-align: middle;
     margin-left: rem(10px);
