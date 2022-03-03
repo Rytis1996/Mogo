@@ -97,4 +97,25 @@
       }
     }
   }
+
+  // OPEN MAP GAP //
+  &__map {
+    background-image: url(/assets/img/map.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-bottom: rem(60px);
+    i,
+    h3 {
+      color: $bg-first;
+      font-size: rem(24px);
+    }
+    h3 {
+      font-family: montserrat;
+      font-weight: bold;
+      margin: rem(20px) 0;
+    }
+    i {
+      margin-top: rem(60px);
+    }
+  }
 }
