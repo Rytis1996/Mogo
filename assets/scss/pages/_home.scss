@@ -1,17 +1,14 @@
 .home {
   box-sizing: border-box;
-  display: block;
   position: relative;
   background-image: url("/assets/img/eagle.png");
   background-size: cover;
   background-position: center center;
-  width: 100%;
   font-size: 0;
 
   &__layout {
     @include layout;
   }
-
   // --NAV-- //
 
   &__mogoLogo {

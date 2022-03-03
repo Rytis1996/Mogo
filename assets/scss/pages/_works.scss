@@ -16,7 +16,11 @@
 
   &__photoLibrary {
     display: block;
+  }
 
+  &__photoList {
+    width: 25%;
+    display: inline-block;
     #pL1 {
       background-image: url(/assets/img/pL1.png);
     }
@@ -38,60 +42,150 @@
     #pL7 {
       background-image: url(/assets/img/pL7.png);
     }
-  }
-  &__photoList {
-    width: 25%;
-    display: inline-block;
 
-    div {
-      height: rem(390px);
-    }
-    i {
-      display: none;
-    }
-  }
-
-  &__photoBlock:hover {
-    position: relative;
-
-    div {
-      position: absolute;
-      width: rem(370px);
-      height: rem(470px);
-      bottom: 10px;
-      right: 10px;
-    }
-    div::before {
-      content: " ";
-      background: linear-gradient($bg-first, $bg-second);
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      opacity: 0.9;
-    }
-    span {
+    &--cardOther {
+      position: relative;
       display: block;
-      position: absolute;
-      color: $fontwhite;
-      left: rem(70px);
-      top: rem(200px);
+      text-align: center;
+      span {
+        display: none;
+        width: fit-content;
+        position: absolute;
+        z-index: 1;
+        top: rem(390px);
+        left: rem(160px);
+      }
+      i,
+      h5,
+      p {
+        color: $fontwhite;
+        font-size: rem(30px);
+        margin: rem(10px) 0;
+      }
+      h5 {
+        text-transform: uppercase;
+        font-family: montserrat;
+        font-size: rem(14px);
+      }
+      p {
+        font-family: roboto;
+        font-weight: 300;
+        font-size: rem(15px);
+      }
+      div {
+        display: block;
+        height: rem(780px);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
     }
-    i:first-child {
-      color: $fontwhite;
-      background-color: $bg-red;
+    &--cardOther:hover {
+      span {
+        display: block;
+      }
+      div::before {
+        content: " ";
+        background: linear-gradient($bg-first, $bg-second);
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0.8;
+      }
     }
-    i {
-      font-size: rem(24px);
-      padding: rem(12px);
-      border-right: 1px solid $bg-red;
-      background-color: $bg-yelow;
-      color: $bg-red;
+
+    &--card {
+      position: relative;
+      display: block;
+      text-align: center;
+      span {
+        display: none;
+        width: fit-content;
+        position: absolute;
+        z-index: 1;
+        top: rem(160px);
+        left: rem(160px);
+      }
+      i,
+      h5,
+      p {
+        color: $fontwhite;
+        font-size: rem(30px);
+        margin: rem(10px) 0;
+      }
+      h5 {
+        text-transform: uppercase;
+        font-family: montserrat;
+        font-size: rem(14px);
+      }
+      p {
+        font-family: roboto;
+        font-weight: 300;
+        font-size: rem(15px);
+      }
+      div {
+        display: block;
+        height: rem(390px);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+    &--card:hover {
+      span {
+        display: block;
+      }
+      div::before {
+        content: " ";
+        background: linear-gradient($bg-first, $bg-second);
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0.8;
+      }
     }
   }
 
-  &__photoBlock:first-child {
-    margin-left: 0;
+  //   FEEDBACK   //
+  &__feedback {
+    margin: rem(100px) 0;
+
+    &--row {
+      color: $bg-lgrey;
+      margin: 0 rem(20px);
+      vertical-align: middle;
+    }
+
+    p {
+      @include par;
+      margin-bottom: rem(30px);
+    }
+    h2 {
+      font-size: rem(24px);
+      font-family: kaushan script;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: rem(10px);
+    }
+    &--block-other {
+      @include block;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &--text {
+      display: inline-block;
+      text-align: left;
+      width: rem(780px);
+      vertical-align: middle;
+    }
+    img {
+      display: inline-block;
+      width: rem(210px);
+      height: rem(210px);
+      margin: 0 rem(20px);
+      vertical-align: middle;
+    }
   }
 }

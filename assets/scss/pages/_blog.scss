@@ -1,0 +1,31 @@
+.blog {
+  font-size: 0;
+  box-sizing: border-box;
+
+  &__header {
+    @include pgheader;
+    margin-top: rem(100px);
+    margin-bottom: rem(50px);
+  }
+  &__block {
+    @include block;
+    margin: rem(15px) auto;
+  }
+
+  //   BLOG BODY SECTION   //
+  &__body {
+    @include layout;
+
+    &--card {
+      width: 33%;
+      display: inline-block;
+      #picture1 {
+        background-image: url(/assets/img/picture1.png);
+      }
+      div {
+        width: rem(380px);
+        height: rem(240px);
+      }
+    }
+  }
+}

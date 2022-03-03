@@ -3,9 +3,13 @@
   box-sizing: border-box;
   text-align: center;
   margin-top: rem(75px);
+  position: relative;
 
   // pgHEADas
-  @include pgheader;
+  &__header {
+    @include pgheader;
+    position: relative;
+  }
   &__block {
     @include block;
     background-color: $bg-first;
@@ -33,13 +37,14 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(224, 224, 224, 0.5);
+      background: $bg-lightgrey;
+      opacity: 0.6;
     }
 
     &--display {
       display: inline-block;
       position: absolute;
-      top: rem(210px);
+      top: rem(375px);
       bottom: 0;
       right: 0;
       left: 0;
@@ -47,7 +52,7 @@
     &--phone {
       display: inline-block;
       position: absolute;
-      top: rem(450px);
+      top: rem(620px);
       bottom: 0;
       right: 0;
       left: rem(500px);
