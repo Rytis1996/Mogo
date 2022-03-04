@@ -11,39 +11,54 @@
     @include layout;
   }
   // --NAV-- //
-
-  &__mogoLogo {
-    display: inline-block;
-    width: 100%;
-    font-family: montserrat;
-    font-weight: bold;
-    font-size: rem(30px);
-    color: $fontwhite;
-    text-align: left;
-    margin-top: rem(30px);
-  }
-
-  &__nav-right {
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    margin-top: 40px;
-  }
-
-  &__nav-link {
-    color: $fontwhite;
-    text-decoration: none;
-    font-family: montserrat;
-    font-weight: 400;
-    font-size: rem(14px);
-    text-transform: uppercase;
-    margin-left: rem(55px);
-    padding-bottom: rem(12px);
-  }
-
-  &__nav-link:hover {
-    color: rgb(252, 227, 138);
-    border-bottom: solid 2px rgb(252, 227, 138);
+  &__nav {
+    &--mogoLogo {
+      display: inline-block;
+      width: 100%;
+      font-family: montserrat;
+      font-weight: bold;
+      font-size: rem(30px);
+      color: $fontwhite;
+      text-align: left;
+      margin-top: rem(30px);
+    }
+    &--right {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      margin-top: 40px;
+      span {
+        display: none;
+        color: $fontwhite;
+        font-family: montserrat;
+        font-weight: bold;
+        font-size: rem(18px);
+        text-transform: uppercase;
+        margin-right: rem(50px);
+      }
+      a {
+        color: $fontwhite;
+        text-decoration: none;
+        font-family: montserrat;
+        font-weight: 400;
+        font-size: rem(14px);
+        text-transform: uppercase;
+        margin-left: rem(55px);
+        padding-bottom: rem(12px);
+      }
+      a:hover {
+        color: rgb(252, 227, 138);
+        border-bottom: solid 2px rgb(252, 227, 138);
+      }
+      @media (max-width: rem(800px)) {
+        span {
+          display: inline-block;
+        }
+        a {
+          display: none;
+        }
+      }
+    }
   }
 
   // --BODY-- //
@@ -52,40 +67,54 @@
     max-width: rem(840px);
     margin: rem(150px) auto;
     text-align: center;
-  }
-  &__h2 {
-    font-family: kaushan script;
-    font-size: rem(70px);
-    font-weight: 400;
-    color: $fontwhite;
-    text-transform: capitalize;
-  }
-
-  &__h1 {
-    font-family: Montserrat;
-    font-size: rem(150px);
-    font-weight: bold;
-    color: $fontwhite;
-    text-align: center;
-    margin: rem(70px) auto;
-    text-align: center;
-  }
-
-  &__block {
-    @include block;
-    background-color: white;
-  }
-  &__btn-more {
-    background: none;
-    width: rem(160px);
-    height: rem(40px);
-    border: solid 4px white;
-    text-transform: uppercase;
-    color: $fontwhite;
-    font-family: montserrat;
-    font-weight: bold;
-    font-size: rem(14px);
-    margin-top: rem(50px);
+    h1 {
+      font-family: Montserrat;
+      font-size: rem(150px);
+      font-weight: bold;
+      color: $fontwhite;
+      text-align: center;
+      margin: rem(70px) auto;
+      text-align: center;
+    }
+    h2 {
+      font-family: kaushan script;
+      font-size: rem(70px);
+      font-weight: 400;
+      color: $fontwhite;
+      text-transform: capitalize;
+    }
+    &--block {
+      @include block;
+      background-color: white;
+    }
+    button {
+      background: none;
+      width: rem(160px);
+      height: rem(40px);
+      border: solid 4px white;
+      text-transform: uppercase;
+      color: $fontwhite;
+      font-family: montserrat;
+      font-weight: bold;
+      font-size: rem(14px);
+      margin-top: rem(50px);
+    }
+    @media (max-width: rem(850px)) {
+      h1 {
+        font-size: rem(100px);
+      }
+      h2 {
+        font-size: rem(50px);
+      }
+    }
+    @media (max-width: rem(600px)) {
+      h1 {
+        font-size: rem(50px);
+      }
+      h2 {
+        font-size: rem(24px);
+      }
+    }
   }
 
   // --FOOTER-- //
@@ -99,11 +128,6 @@
       margin-left: rem(26px);
       &:first-child {
         margin-left: 0;
-      }
-      @media (max-width: rem(1199px)) {
-        &:first-child {
-          margin-left: 30px;
-        }
       }
       &:hover {
         span {
@@ -138,6 +162,18 @@
       h5 {
         font-size: rem(18px);
         font-weight: 400;
+        padding-left: rem(30px);
+      }
+
+      @media (max-width: rem(1199px)) and (min-width: rem(600px)) {
+        width: 50%;
+        margin: 0;
+        padding-left: rem(30px);
+      }
+      @media (max-width: rem(599px)) {
+        width: 100%;
+        margin: 0;
+        padding: 0 rem(30px);
       }
     }
   }

@@ -106,10 +106,22 @@
         line-height: 1.5;
       }
     }
+    @media (max-width: rem(1199px)) {
+      display: block;
+      &--photoBlock {
+        margin: 0 auto;
+        &:first-child {
+          margin: 0 auto;
+        }
+      }
+    }
   }
   // -- TEAM FOOTER -- //
   &__logo {
     background-color: $bg-lightgrey;
     padding: rem(50px) 0;
+    img {
+      width: 100%;
+    }
   }
 }

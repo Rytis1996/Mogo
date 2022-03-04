@@ -11,90 +11,94 @@
 
   &__header {
     @include pgheader;
-  }
-
-  &__block {
-    @include block;
-    margin: rem(15px) auto;
+    &--block {
+      @include block;
+      margin: rem(15px) auto;
+    }
   }
 
   // --3 PHOTO inline --//
   &__photo {
     margin: rem(90px) 0;
-  }
-  &__photoBlock {
-    width: rem(370px);
-    height: rem(250px);
-    display: inline-block;
-    margin-left: rem(45px);
-    font-size: 0;
-    box-sizing: border-box;
-    background-color: $bg-blue;
 
-    #photo1 {
-      background-image: url(/assets/img/keyboard.png);
-    }
-    #photo2 {
-      background-image: url(/assets/img/tech.png);
-    }
-    #photo3 {
-      background-image: url(/assets/img/table.png);
-    }
-
-    div {
+    &--photoBlock {
       width: rem(370px);
       height: rem(250px);
-    }
-    h6,
-    i {
-      color: $fontblack;
-      font-weight: bold;
-      display: none;
-    }
-    h6 {
-      font-family: montserrat;
-      font-size: rem(18px);
-    }
-  }
+      display: inline-block;
+      margin-left: rem(45px);
+      font-size: 0;
+      box-sizing: border-box;
+      background-color: $bg-blue;
 
-  &__photoBlock:hover {
-    position: relative;
+      #photo1 {
+        background-image: url(/assets/img/keyboard.png);
+      }
+      #photo2 {
+        background-image: url(/assets/img/tech.png);
+      }
+      #photo3 {
+        background-image: url(/assets/img/table.png);
+      }
 
-    div {
-      position: absolute;
-      width: rem(370px);
-      height: rem(250px);
-      bottom: 10px;
-      right: 10px;
+      div {
+        width: rem(370px);
+        height: rem(250px);
+      }
+      h6,
+      i {
+        color: $fontblack;
+        font-weight: bold;
+        display: none;
+      }
+      h6 {
+        font-family: montserrat;
+        font-size: rem(18px);
+      }
+      &:hover {
+        position: relative;
+        div {
+          position: absolute;
+          width: rem(370px);
+          height: rem(250px);
+          bottom: 10px;
+          right: 10px;
+        }
+        div::before {
+          content: " ";
+          background: linear-gradient($bg-first, $bg-second);
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          opacity: 0.9;
+        }
+        i,
+        h6 {
+          display: block;
+          position: absolute;
+          color: $fontwhite;
+        }
+        i {
+          left: 160px;
+          top: 90px;
+        }
+        h6 {
+          left: 120px;
+          top: 114px;
+        }
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      @media (max-width: rem(1199px)) {
+        display: block;
+        margin: rem(30px) auto;
+        &:first-child {
+          margin: rem(30px) auto;
+        }
+      }
     }
-    div::before {
-      content: " ";
-      background: linear-gradient($bg-first, $bg-second);
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      opacity: 0.9;
-    }
-    i,
-    h6 {
-      display: block;
-      position: absolute;
-      color: $fontwhite;
-    }
-    i {
-      left: 160px;
-      top: 90px;
-    }
-    h6 {
-      left: 120px;
-      top: 114px;
-    }
-  }
-
-  &__photoBlock:first-child {
-    margin-left: 0;
   }
 
   // --BLUE BLOCK-- //
@@ -106,29 +110,38 @@
     &--block {
       display: inline-block;
       border-left: 1px solid white;
-      max-width: rem(240px);
       width: 20%;
       padding: rem(90px) 0;
+      h3 {
+        font-size: rem(72px);
+        font-family: montserrat;
+        font-weight: bold;
+      }
+      h4 {
+        font-size: rem(14px);
+        font-family: montserrat;
+      }
     }
     &--block:last-child {
       border-right: 1px solid white;
     }
-    h3 {
-      font-size: rem(72px);
-      font-family: montserrat;
-      font-weight: bold;
-    }
-    h4 {
-      font-size: rem(14px);
-      font-family: montserrat;
+    @media (max-width: rem(800px)) {
+      h3 {
+        font-size: rem(32px);
+      }
+      h4 {
+        font-size: rem(12px);
+      }
     }
   }
+
   // --SERVICE-- //
   &__service {
     @include pgheader;
     text-align: center;
     margin-top: rem(90px);
   }
+
   // --Amazing services --//
   &__footer {
     max-width: rem(1200px);
@@ -140,6 +153,9 @@
       width: 33%;
       padding: rem(45px) 0;
       text-align: left;
+      @media (max-width: rem(1000px)) {
+        width: 50%;
+      }
 
       i {
         display: inline-block;
@@ -163,10 +179,25 @@
       p {
         max-width: rem(220px);
       }
+      &:nth-child(-n + 3) {
+        border-bottom: solid 1px $fontprg;
+      }
     }
-
-    &--card:nth-child(-n + 3) {
-      border-bottom: solid 1px $fontprg;
+    @media (max-width: rem(1000px)) {
+      &--card {
+        width: 50%;
+        &:nth-child(-n + 4) {
+          border-bottom: solid 1px $fontprg;
+        }
+      }
+    }
+    @media (max-width: rem(700px)) {
+      &--card {
+        width: 100%;
+        &:nth-child(-n + 5) {
+          border-bottom: solid 1px $fontprg;
+        }
+      }
     }
   }
 }

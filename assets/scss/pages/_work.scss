@@ -24,7 +24,6 @@
   &__designe {
     padding-top: rem(90px);
     background-image: url(/assets/img/lake.png);
-    // box-shadow: inset 0 0 0 10px $fontprg;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -44,7 +43,8 @@
     &--display {
       display: inline-block;
       position: absolute;
-      top: rem(375px);
+      // top: rem(375px);
+      top: 38%;
       bottom: 0;
       right: 0;
       left: 0;
@@ -52,13 +52,27 @@
     &--phone {
       display: inline-block;
       position: absolute;
-      top: rem(620px);
+      // top: rem(620px);
+      top: 62%;
       bottom: 0;
       right: 0;
       left: rem(500px);
 
       img {
         border-radius: 10%;
+      }
+    }
+    @media (max-width: rem(700px)) {
+      &--display,
+      &--displaySize {
+        img {
+          width: 70%;
+        }
+      }
+      &--phone {
+        img {
+          width: 90%;
+        }
       }
     }
   }
@@ -140,6 +154,16 @@
       background-color: $bg-blue;
       border-radius: rem(10px);
     }
+    @media (max-width: rem(1199px)) {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      &--info {
+        display: block;
+        margin: rem(30px) auto;
+      }
+    }
   }
 
   //   FEEDBACK   //
@@ -158,7 +182,6 @@
   }
   p {
     @include par;
-    max-width: rem(780px);
     margin-bottom: rem(30px);
   }
   h2 {
@@ -177,7 +200,19 @@
   &__text {
     display: inline-block;
     margin: rem(70px);
-    max-width: rem(780px);
+    width: 60%;
     text-align: left;
+    @media (max-width: rem(1030px)) {
+      width: 50%;
+      margin: rem(20px);
+    }
+    @media (max-width: rem(650px)) {
+      width: 30%;
+      margin: rem(20px);
+    }
+    @media (max-width: rem(650px)) {
+      width: 20%;
+      margin: rem(10px);
+    }
   }
 }

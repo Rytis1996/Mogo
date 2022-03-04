@@ -146,6 +146,12 @@
         opacity: 0.8;
       }
     }
+    @media (max-width: rem(1199px)) {
+      width: 50%;
+    }
+    @media (max-width: rem(700px)) {
+      width: 100%;
+    }
   }
 
   //   FEEDBACK   //
