@@ -1,14 +1,17 @@
 .footer {
   @include layout;
+  margin: rem(50px) auto;
   border-bottom: 1px solid $fontprg;
   font-size: 0;
   box-sizing: border-box;
   text-align: top;
+  padding-bottom: rem(70px);
   &__left {
     width: rem(480px);
     height: rem(355px);
     text-align: left;
     display: inline-block;
+    vertical-align: top;
     h1 {
       font-size: rem(46px);
       font-family: montserrat;
@@ -27,6 +30,7 @@
       border-bottom: 1px solid $fontprg;
       display: block;
       padding: rem(20px) 0;
+      margin-top: rem(20px);
     }
     h2 {
       font-size: rem(18px);
@@ -72,6 +76,9 @@
       font-family: montserrat;
       text-transform: uppercase;
     }
+    &--icons {
+      margin-bottom: rem(14px);
+    }
   }
   &__middle {
     width: rem(340px);
@@ -84,11 +91,13 @@
       margin: rem(15px) rem(20px) rem(15px) 0;
       width: rem(120px);
       height: rem(80px);
+      vertical-align: middle;
     }
 
     h2 {
       font-size: rem(14px);
       font-family: montserrat;
+      font-weight: bold;
       color: $fontblack;
       text-transform: uppercase;
       text-align: top;
@@ -101,6 +110,7 @@
       text-transform: uppercase;
       width: rem(200px);
       line-height: 2;
+      margin-bottom: rem(9px);
     }
     p {
       font-size: rem(15px);
@@ -109,6 +119,42 @@
     }
     &--text {
       display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  &__right {
+    width: rem(270px);
+    height: rem(355px);
+    display: inline-block;
+    margin-left: rem(30px);
+    text-align: left;
+    vertical-align: top;
+    h2 {
+      font-size: rem(14px);
+      font-family: montserrat;
+      color: $fontblack;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-align: top;
+      margin-bottom: rem(39px);
+    }
+
+    img {
+      display: inline-block;
+      width: rem(88px);
+      height: rem(88px);
+      margin: rem(1px);
+    }
+    img:nth-child(3n + 1) {
+      margin-left: 0;
+      display: inline-block;
+    }
+    h4 {
+      font-family: roboto;
+      font-style: italic;
+      font-size: rem(13px);
+      font-weight: 300;
+      margin-top: rem(19px);
     }
   }
 }
