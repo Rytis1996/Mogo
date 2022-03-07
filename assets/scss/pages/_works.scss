@@ -167,6 +167,7 @@
     p {
       @include par;
       margin-bottom: rem(30px);
+      width: 100%;
     }
     h2 {
       font-size: rem(24px);
@@ -183,15 +184,39 @@
     &--text {
       display: inline-block;
       text-align: left;
-      width: rem(780px);
+      width: 60%;
       vertical-align: middle;
     }
     img {
       display: inline-block;
-      width: rem(210px);
+      // width: rem(210px);
+      width: 18%;
       height: rem(210px);
       margin: 0 rem(20px);
       vertical-align: middle;
+    }
+    @media (max-width: rem(780px)) {
+      img {
+        height: rem(150px);
+        margin: 0 rem(10px);
+      }
+      h2 {
+        font-size: rem(14px);
+        margin-left: rem(5px);
+      }
+      p {
+        font-size: rem(12px);
+        width: 100%;
+      }
+      &--row {
+        margin: 0 rem(5px);
+      }
+    }
+    @media (max-width: rem(600px)) {
+      img {
+        height: rem(90px);
+        margin: 0 rem(5px);
+      }
     }
   }
 }

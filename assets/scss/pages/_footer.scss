@@ -7,8 +7,7 @@
   text-align: top;
   padding-bottom: rem(70px);
   &__left {
-    width: rem(480px);
-    height: rem(355px);
+    width: 40%;
     text-align: left;
     display: inline-block;
     vertical-align: top;
@@ -53,7 +52,7 @@
       margin: rem(16px) rem(9px);
     }
     input {
-      width: rem(230px);
+      width: 48%;
       height: rem(40px);
       border: 1px solid $fontprg;
       border-right: none;
@@ -67,7 +66,7 @@
     button {
       margin-top: rem(24px);
       height: rem(40px);
-      width: rem(150px);
+      width: 31%;
       background-color: $bg-blue;
       border: none;
       color: $fontwhite;
@@ -79,21 +78,15 @@
     &--icons {
       margin-bottom: rem(14px);
     }
+    @media (max-width: rem(1199px)) {
+      padding-left: rem(30px);
+    }
   }
   &__middle {
-    width: rem(340px);
-    height: rem(355px);
-    margin-left: rem(30px);
+    width: 30%;
+    padding-left: rem(30px);
     display: inline-block;
     text-align: left;
-
-    img {
-      margin: rem(15px) rem(20px) rem(15px) 0;
-      width: rem(120px);
-      height: rem(80px);
-      vertical-align: middle;
-    }
-
     h2 {
       font-size: rem(14px);
       font-family: montserrat;
@@ -103,30 +96,35 @@
       text-align: top;
       margin-bottom: rem(25px);
     }
-    h3 {
-      font-size: rem(12px);
-      font-family: montserrat;
-      color: $fontblack;
-      text-transform: uppercase;
-      width: rem(200px);
-      line-height: 2;
-      margin-bottom: rem(9px);
-    }
-    p {
-      font-size: rem(15px);
-      font-family: roboto;
-      color: $fontprg;
+    img {
+      margin: rem(15px) 0;
+      width: 30%;
+      vertical-align: middle;
     }
     &--text {
       display: inline-block;
       vertical-align: middle;
+      width: 70%;
+      padding-left: rem(20px);
+      h3 {
+        font-size: rem(12px);
+        font-family: montserrat;
+        color: $fontblack;
+        text-transform: uppercase;
+        line-height: 1.5;
+        margin-bottom: rem(9px);
+      }
+      p {
+        font-size: rem(15px);
+        font-family: roboto;
+        color: $fontprg;
+      }
     }
   }
   &__right {
-    width: rem(270px);
-    height: rem(355px);
+    width: 30%;
     display: inline-block;
-    margin-left: rem(30px);
+    padding-left: rem(30px);
     text-align: left;
     vertical-align: top;
     h2 {
@@ -141,8 +139,7 @@
 
     img {
       display: inline-block;
-      width: rem(88px);
-      height: rem(88px);
+      width: 32%;
       margin: rem(1px);
     }
     img:nth-child(3n + 1) {

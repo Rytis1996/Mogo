@@ -75,6 +75,19 @@
         }
       }
     }
+    @media (max-width: rem(700px)) {
+      &--display,
+      &--displaySize {
+        img {
+          width: 70%;
+        }
+      }
+      &--phone {
+        img {
+          width: 90%;
+        }
+      }
+    }
   }
 
   // --WHAT WE DO-- //
@@ -100,19 +113,16 @@
       position: relative;
       text-align: left;
       vertical-align: top;
-
       i {
         margin: rem(14px) rem(15px);
         height: rem(30px);
         color: $bg-blue;
       }
-
       i:last-child {
         position: absolute;
         right: 0;
         color: $fontprg;
       }
-
       div {
         border: 1px solid $bg-lgrey;
         width: 100%;
@@ -155,9 +165,16 @@
       border-radius: rem(10px);
     }
     @media (max-width: rem(1199px)) {
-      img {
-        width: 100%;
-        height: 100%;
+      &--img {
+        padding-right: rem(30px);
+        display: block;
+        height: 50%;
+        width: 50%;
+        margin: 0 auto;
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
       &--info {
         display: block;
@@ -169,50 +186,82 @@
   //   FEEDBACK   //
   &__feedback {
     background-color: $bg-lightgrey;
+    margin: rem(100px) 0;
     &--row {
       color: $bg-lgrey;
       margin: 0 rem(20px);
+      vertical-align: middle;
     }
     &--icon {
       font-size: rem(60px);
       color: $bg-blue;
       border: 2px solid $bg-blue;
       padding: rem(40px);
+      margin: rem(60px);
     }
-  }
-  p {
-    @include par;
-    margin-bottom: rem(30px);
-  }
-  h2 {
-    color: $fontblack;
-    font-size: rem(24px);
-    font-family: kaushan script;
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: rem(10px);
-  }
-  &__block-other {
-    @include block;
-    display: inline-block;
-    vertical-align: middle;
-  }
-  &__text {
-    display: inline-block;
-    margin: rem(70px);
-    width: 60%;
-    text-align: left;
-    @media (max-width: rem(1030px)) {
-      width: 50%;
-      margin: rem(20px);
+    p {
+      @include par;
+      margin-bottom: rem(30px);
+      width: 100%;
     }
-    @media (max-width: rem(650px)) {
-      width: 30%;
-      margin: rem(20px);
+    h2 {
+      color: $fontblack;
+      font-size: rem(24px);
+      font-family: kaushan script;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: rem(10px);
     }
-    @media (max-width: rem(650px)) {
-      width: 20%;
-      margin: rem(10px);
+    &--block-other {
+      @include block;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &--text {
+      display: inline-block;
+      text-align: left;
+      width: 60%;
+      vertical-align: middle;
+    }
+    @media (max-width: rem(980px)) {
+      &--icon {
+        font-size: rem(40px);
+        border: 1px solid $bg-blue;
+        padding: rem(20px);
+        margin: rem(30px);
+      }
+      h2 {
+        font-size: rem(14px);
+        margin-left: rem(5px);
+      }
+      p {
+        font-size: rem(15px);
+        width: 100%;
+        margin-bottom: rem(15px);
+      }
+      &--row {
+        margin: 0 rem(5px);
+      }
+    }
+    @media (max-width: rem(600px)) {
+      &--icon {
+        font-size: rem(30px);
+        border: 1px solid $bg-blue;
+        padding: rem(10px);
+        margin: rem(15px);
+      }
+      p {
+        font-size: rem(12px);
+        width: 100%;
+        margin-bottom: rem(5px);
+      }
+      &--row {
+        margin: 0 rem(5px);
+      }
+      h2 {
+        font-size: rem(14px);
+        margin-left: rem(5px);
+      }
     }
   }
 }

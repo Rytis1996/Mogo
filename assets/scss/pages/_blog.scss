@@ -95,6 +95,13 @@
         margin-right: rem(6px);
         display: inline-block;
       }
+      @media (max-width: rem(1199px)) {
+        display: block;
+        margin: 0 auto;
+        &:first-child {
+          margin: 0 auto;
+        }
+      }
     }
   }
 
