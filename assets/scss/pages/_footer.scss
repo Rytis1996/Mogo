@@ -49,7 +49,7 @@
     i {
       font-size: rem(16px);
       color: $bg-blue;
-      margin: rem(16px) rem(9px);
+      margin: rem(16px) rem(7px);
     }
     input {
       width: 48%;
@@ -81,9 +81,15 @@
     @media (max-width: rem(1199px)) {
       padding-left: rem(30px);
     }
+    @media (max-width: rem(850px)) {
+      display: block;
+      width: 100%;
+      margin: rem(50px) auto;
+      padding-right: rem(30px);
+    }
   }
   &__middle {
-    width: 30%;
+    width: 35%;
     padding-left: rem(30px);
     display: inline-block;
     text-align: left;
@@ -120,9 +126,16 @@
         color: $fontprg;
       }
     }
+    @media (max-width: rem(850px)) {
+      width: 60%;
+    }
+    @media (max-width: rem(450px)) {
+      display: block;
+      width: 100%;
+    }
   }
   &__right {
-    width: 30%;
+    width: 25%;
     display: inline-block;
     padding-left: rem(30px);
     text-align: left;
@@ -153,5 +166,15 @@
       font-weight: 300;
       margin-top: rem(19px);
     }
+    @media (max-width: rem(850px)) {
+      width: 40%;
+    }
+    @media (max-width: rem(450px)) {
+      display: block;
+      width: 100%;
+    }
+  }
+  @media (max-width: rem(850px)) {
+    text-align: left;
   }
 }

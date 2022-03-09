@@ -9,6 +9,7 @@
 
   &__layout {
     @include layout;
+    // height: 100vh;
   }
   // --NAV-- //
   &__nav {
@@ -123,6 +124,7 @@
     text-align: left;
     padding-bottom: rem(25px);
     &--info {
+      opacity: 0.6;
       width: rem(280px);
       display: inline-block;
       margin-left: rem(26px);
@@ -130,6 +132,7 @@
         margin-left: 0;
       }
       &:hover {
+        opacity: 1;
         span {
           display: inline;
         }

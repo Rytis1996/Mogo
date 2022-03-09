@@ -20,40 +20,20 @@
 
   &__photoList {
     width: 25%;
+    height: 100vh;
     display: inline-block;
-    #pL1 {
-      background-image: url(/assets/img/pL1.png);
-    }
-    #pL2 {
-      background-image: url(/assets/img/pL2.png);
-    }
-    #pL3 {
-      background-image: url(/assets/img/pL3.png);
-    }
-    #pL4 {
-      background-image: url(/assets/img/pL4.png);
-    }
-    #pL5 {
-      background-image: url(/assets/img/pL5.png);
-    }
-    #pL6 {
-      background-image: url(/assets/img/pL6.png);
-    }
-    #pL7 {
-      background-image: url(/assets/img/pL7.png);
-    }
 
     &--cardOther {
       position: relative;
       display: block;
       text-align: center;
+      width: 100%;
       span {
         display: none;
-        width: fit-content;
+        width: 100%;
         position: absolute;
         z-index: 1;
-        top: rem(390px);
-        left: rem(160px);
+        top: 40%;
       }
       i,
       h5,
@@ -73,10 +53,15 @@
         font-size: rem(15px);
       }
       div {
+        width: 100%;
         display: block;
-        height: rem(780px);
+        height: 100%;
         background-repeat: no-repeat;
         background-size: cover;
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
     &--cardOther:hover {
@@ -99,13 +84,13 @@
       position: relative;
       display: block;
       text-align: center;
+      width: 100%;
       span {
         display: none;
-        width: fit-content;
+        width: 100%;
         position: absolute;
         z-index: 1;
-        top: rem(160px);
-        left: rem(160px);
+        top: 40%;
       }
       i,
       h5,
@@ -125,10 +110,15 @@
         font-size: rem(15px);
       }
       div {
+        width: 100%;
         display: block;
-        height: rem(390px);
+        height: 50%;
         background-repeat: no-repeat;
         background-size: cover;
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
     &--card:hover {

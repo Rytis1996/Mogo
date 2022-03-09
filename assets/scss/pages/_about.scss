@@ -106,12 +106,19 @@
     background-color: $bg-blue;
     text-align: center;
     color: $fontwhite;
+    vertical-align: middle;
 
     &--block {
       display: inline-block;
       border-left: 1px solid white;
       width: 20%;
+      position: relative;
       padding: rem(90px) 0;
+      vertical-align: middle;
+      div {
+        height: 30px;
+      }
+
       h3 {
         font-size: rem(72px);
         font-family: montserrat;
@@ -120,17 +127,23 @@
       h4 {
         font-size: rem(14px);
         font-family: montserrat;
+        text-transform: uppercase;
+        width: 100%;
+        display: block;
       }
     }
     &--block:last-child {
       border-right: 1px solid white;
     }
-    @media (max-width: rem(800px)) {
+    @media (max-width: rem(910px)) {
       h3 {
         font-size: rem(32px);
       }
       h4 {
         font-size: rem(12px);
+      }
+      &--block {
+        padding: rem(50px) 0;
       }
     }
   }
@@ -140,6 +153,9 @@
     @include pgheader;
     text-align: center;
     margin-top: rem(90px);
+  }
+  &__block {
+    @include block;
   }
 
   // --Amazing services --//
